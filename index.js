@@ -14,5 +14,9 @@ app.use(express.json())
 const studentRoute = require('./routes/schoolroute')
 app.use('/school',studentRoute)
 
+app.get('/',(req,res)=>{
+    res.send("post at /school/addSchool")
+})
+
 
 app.listen(PORT,()=>console.log("server started at"+PORT))
